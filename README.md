@@ -10,9 +10,11 @@ Dataset
 File: recruitment_data.csv
 Records: 1,500 candidates
 Target Variable: HiringDecision (0 = Not Hired, 1 = Hired)
-FeatureTypeDescriptionAgeNumericCandidate age (20–50)GenderBinary0 = Female, 1 = MaleEducationLevelOrdinal1 = Bachelor's → 4 = PhDExperienceYearsNumericTotal years of work experience (0–15)PreviousCompaniesNumericNumber of previous employers (1–5)DistanceFromCompanyNumericDistance in km from workplaceInterviewScoreNumericScore from interview panel (0–100)SkillScoreNumericTechnical skill assessment score (0–100)PersonalityScoreNumericPersonality/behavioural score (0–100)RecruitmentStrategyCategoricalChannel used (1 = Aggressive, 2 = Moderate, 3 = Conservative)HiringDecisionBinary0 = Not Hired, 1 = Hired (Target)
-Statistical Summary:
 
+Feature Type  Description  
+AgeNumericCandidate age (20–50)GenderBinary0 = Female, 1 = MaleEducationLevelOrdinal1 = Bachelor's → 4 = PhDExperienceYearsNumericTotal years of work experience (0–15)PreviousCompaniesNumericNumber of previous employers (1–5)DistanceFromCompanyNumericDistance in km from workplaceInterviewScoreNumericScore from interview panel (0–100)SkillScoreNumericTechnical skill assessment score (0–100)PersonalityScoreNumericPersonality/behavioural score (0–100)RecruitmentStrategyCategoricalChannel used (1 = Aggressive, 2 = Moderate, 3 = Conservative)HiringDecisionBinary0 = Not Hired, 1 = Hired (Target)
+
+Statistical Summary:
 Mean Age: 35.15 | Mean Experience: 7.69 years
 Dataset is balanced with a reasonable Hired vs Not Hired split
 No missing values — clean dataset ready for modelling
@@ -25,11 +27,11 @@ GridSearchCV Tuning → Tuned Model → Cross-Validation → Overfitting Analysi
 Cost Complexity Pruning → Pruned Model → Model Comparison → Business Insights
 
 
-Sections at a Glance
+Sections at a Glance:
 SectionDescription
 1. ImportsAll libraries loaded upfront
 2. Problem StatementHR automation business context
-3. 3. Load DataCSV → DataFrame, shape & preview
+3. Load DataCSV → DataFrame, shape & preview
 4. EDAdescribe(), distributions, correlation heatmap, boxplots
 5. PreprocessingFeature/target split, StandardScaler, 80/20 stratified split
 6. Baseline CARTDecisionTreeClassifier(criterion='gini') — no restrictions
@@ -46,7 +48,8 @@ SectionDescription
 17. Prediction Functionpredict_hiring(...) — reusable inference on new candidates
 18. Final SummaryBusiness insights and model recommendation
 
-📈 Results
+Results:
+
 Model Comparison Table
 Model                     Accuracy    ROC-AUC    Avg Precision  Tree Depth      Num Leaves
 Baseline CART              0.8933      0.8724    0.739213109       13            109
