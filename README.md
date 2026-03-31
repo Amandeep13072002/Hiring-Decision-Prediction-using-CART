@@ -26,12 +26,33 @@ Cost Complexity Pruning → Pruned Model → Model Comparison → Business Insig
 
 
 Sections at a Glance
-SectionDescription1. ImportsAll libraries loaded upfront2. Problem StatementHR automation business context3. Load DataCSV → DataFrame, shape & preview4. EDAdescribe(), distributions, correlation heatmap, boxplots5. PreprocessingFeature/target split, StandardScaler, 80/20 stratified split6. Baseline CARTDecisionTreeClassifier(criterion='gini') — no restrictions7. Evaluation (Baseline)Accuracy, ROC-AUC, confusion matrix, ROC curve8. Tree VisualizationText + visual tree diagram (depth=3)9. Feature ImportanceBar chart of feature contribution (Baseline)10. Hyperparameter TuningGridSearchCV over 90 combinations, StratifiedKFold(5)11. Tuned Model EvaluationConfusion matrix, classification report12. Cross-Validation10-fold CV, per-fold bar chart13. Overfitting AnalysisTrain vs Test accuracy across depths 1–2014. Cost Complexity PruningCCP alpha path, pruned tree selection15. Model ComparisonBaseline vs Tuned vs Pruned — full metrics table + ROC curves16. Feature ImportanceTuned model feature ranking17. Prediction Functionpredict_hiring(...) — reusable inference on new candidates18. Final SummaryBusiness insights and model recommendation
+SectionDescription
+1. ImportsAll libraries loaded upfront
+2. Problem StatementHR automation business context
+3. 3. Load DataCSV → DataFrame, shape & preview
+4. EDAdescribe(), distributions, correlation heatmap, boxplots
+5. PreprocessingFeature/target split, StandardScaler, 80/20 stratified split
+6. Baseline CARTDecisionTreeClassifier(criterion='gini') — no restrictions
+7. Evaluation (Baseline)Accuracy, ROC-AUC, confusion matrix, ROC curve
+8. Tree VisualizationText + visual tree diagram (depth=3)
+9. Feature ImportanceBar chart of feature contribution (Baseline)
+10. Hyperparameter TuningGridSearchCV over 90 combinations, StratifiedKFold(5)
+11. Tuned Model EvaluationConfusion matrix, classification report
+12. Cross-Validation10-fold CV, per-fold bar chart
+13. Overfitting AnalysisTrain vs Test accuracy across depths 1–20
+14. Cost Complexity PruningCCP alpha path, pruned tree selection
+15. Model ComparisonBaseline vs Tuned vs Pruned — full metrics table + ROC curves
+16. Feature ImportanceTuned model feature ranking
+17. Prediction Functionpredict_hiring(...) — reusable inference on new candidates
+18. Final SummaryBusiness insights and model recommendation
 
 📈 Results
 Model Comparison Table
-ModelAccuracyROC-AUCAvg PrecisionTree DepthNum LeavesBaseline CART0.89330.87240.739213109Tuned CART (GridSearchCV)0.91670.91160.85061277✅ Pruned CART (CCP)0.94000.92560.8869631
-🏆 Best Model: Pruned CART
+Model                     Accuracy    ROC-AUC    Avg Precision  Tree Depth      Num Leaves
+Baseline CART              0.8933      0.8724    0.739213109       13            109
+Tuned CART (GridSearchCV)  0.9167      0.9116    0.85061277        12             77
+Pruned CART (CCP)          0.9400      0.9256    0.8869631         6              31
+Best Model: Pruned CART
 
 Accuracy: 94.00% — correctly classifies 94 out of 100 candidates
 ROC-AUC: 0.9256 — excellent ability to separate hired vs not hired
