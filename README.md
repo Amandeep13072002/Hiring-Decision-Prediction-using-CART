@@ -74,11 +74,11 @@ Std Deviation : 0.1193
 Min Score     : 0.5826  (Fold 10)
 Max Score     : 0.9900  (Fold 2)
 
-📊 Key Visualizations
+Key Visualizations
 The notebook generates 15 plots across the pipeline:
 PlotDescriptionPlot 1Target class distribution (Hired vs Not Hired)Plot 2Feature distributions (6 numerical variables)Plot 3Correlation heatmapPlot 4Boxplots by hiring decisionPlot 5Confusion matrix — Baseline CARTPlot 6ROC curve — Baseline CARTPlot 7Decision tree diagram (depth=3)Plot 8Feature importance — BaselinePlot 9Confusion matrix — Tuned CARTPlot 10Top-20 GridSearchCV parameter combinationsPlot 1110-fold cross-validation scores per foldPlot 12Overfitting analysis (Train vs Test accuracy)Plot 13CCP Alpha vs Accuracy curvePlot 14ROC curves — all 3 models overlaid + bar comparisonPlot 15Feature importance — Tuned model
 
-💡 Business Insights
+ Business Insights
 Top 3 Most Influential Features
 RankFeatureImportance ScoreBusiness Meaning🥇 1RecruitmentStrategy0.3705The channel/strategy used to recruit drives hiring outcomes most strongly🥈 2ExperienceYears0.1390Work experience is the second strongest signal🥉 3SkillScore0.1344Technical skill assessment is a reliable predictor
 Key Findings
